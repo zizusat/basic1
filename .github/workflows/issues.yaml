@@ -1,0 +1,8 @@
+name: handle issues
+on: issues
+jobs:
+    output-info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: output wbwnt details
+              run: echo "${{toJson(github.event)}}"
